@@ -11,3 +11,7 @@ qemu-bios:
 .PHONY: qemu-bios-exit
 qemu-bios-exit:
 	zig build && qemu-system-riscv64 -bios zig-out/bin/mixos -machine virt -serial stdio
+
+.PHONY: qemu-kernel-exit
+qemu-kernel-exit:
+	zig build && qemu-system-riscv64 -kernel zig-out/bin/mixos -machine virt -serial stdio

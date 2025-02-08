@@ -1,9 +1,9 @@
 MEMORY {
-  dram_space (rwx) : ORIGIN = 0x80000000, LENGTH = 128
+  dram_space (rwx) : ORIGIN = 0x80200000, LENGTH = 128
 }
 
 SECTIONS {
   .text : {
-    hello.o(.text.bios)
+    hello.o(.text.kernel)
   } > dram_space
 }
